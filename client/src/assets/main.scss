@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+:root {
+     --blue-500: linear-gradient(135deg, #0D6CCB 0%, #729EFD 100%);
+     --blue-600:  linear-gradient(91deg, rgba(114, 158, 253, 0.70) 0%, rgba(1, 103, 198, 0.70) 100%); 
+     --blue : linear-gradient(259deg, #0067C6 0%, #3D74FF 100%);
+     --green:  linear-gradient(265deg, #237249 6.79%, #35C66B 97.2%);
+     --white: #ffffff;
+     --black-100: #000000;
+     --black-200: #16191B;
+     --black-300: #202124;
+     --gray-100: rgba(255, 255, 255, 0.50);
+     --gray-200: #747474;
+     --gray-300: #5E5E5E;
+     --gray-400: #3F4041;
+     --gray-500: #414141;
+     --gray-600: #838383;
+     --gray-700: #AAAAAA;
+     --blue-100: #3D74FF;
+     --blue-200: #638FFF;
+     --blue-300: #3870FF;
+     --blue-400: #4277FF;
+     --green-100: #57AF77;
+     --green-200: #345B42;
+     --container-w: min(calc(100svw - var(--chat-w) - 1.25rem * 2), 75rem);
+}
+
+:root {
+     --inventory-h: 13.75rem;
+     --container-w: min(calc(100svw - var(--chat-w) - 1.25rem * 2), 75rem);
+     --chat-w: 20rem;
+     --matches-coupon-h: 3.75rem;
+     -webkit-tap-highlight-color: transparent;
+     --scroll-shadow-color: 28 35 59;
+     --scroll-shadow-size: 2.25rem;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+     font-family: 'Gilroy-Regular', sans-serif;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html body {
+     background-image: url('/img/background.jpg');
+     display: block;
+     min-height: 80px;
+     width: 100%;
+     float: left;
+     position: relative;
+     padding: 0;
+     -webkit-background-size: cover;
+     background-size: cover;
+     background-position: center center;
+}
+
+body {
+     color: var(--white);
+     font-size: 1rem;
+}
+
+body {
+     margin: 0;
+     line-height: inherit;
+}
+
+body {
+     padding: 0;
+     margin: 0;
+}
+
+* {
+     box-sizing: border-box;
+}
+
+img {
+     pointer-events: none;
+}
+
+.grid-cols-12 {
+     display: grid;
+     gap: 15px;
+     grid-template-columns: 30% 1fr;
+
+     @media only screen and (max-width: 1023px) {
+          grid-template-columns: repeat(1, 1fr);
+     }
+}
