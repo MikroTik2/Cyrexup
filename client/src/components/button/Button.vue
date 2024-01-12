@@ -8,6 +8,7 @@
                 'btn--logout' : logoutBtn,
                 'btn--activate' : activateBtn,
                 'btn--copyBtn' : copyBtn,
+                'btn--participate' : runBtn,
         }]"
         >
         <slot />
@@ -23,6 +24,7 @@
             'btn--blue': color === 'blue',
             'btn--logout' : logoutBtn,
             'btn--activate' : activateBtn,
+            'btn--participate' : runBtn,
         }]"
     
     >    
@@ -54,6 +56,10 @@
             required: false
         },
         copyBtn: {
+            type: Boolean,
+            required: false
+        },
+        runBtn: {
             type: Boolean,
             required: false
         },
@@ -122,6 +128,16 @@
                     height: 23px;
                     border-radius: 5px;
                 }
+        }
+        &--participate {
+            background: var(--black-400);
+            color: var(--blue-400);
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            width: 165px;
+            height: 40px;
         }
     }
     
