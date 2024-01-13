@@ -98,7 +98,7 @@
                     <div class="rounded-[15px] flex flex-col gap-[15px] w-[100%]">
                          
                          <!-- routes -->
-                         <div class="rounded-[15px] relative bg-[#16181B] h-[50px] hidden overflow-auto whitespace-nowrap lg:flex">
+                         <div class="rounded-[10px] relative bg-[#16181B] h-[50px] hidden overflow-auto whitespace-nowrap lg:flex">
 
                               <div
                                    role="presentation"
