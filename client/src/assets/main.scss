@@ -108,3 +108,11 @@ img {
           grid-template-columns: repeat(1, 1fr);
      }
 }
+
+.no-scrollbar::-webkit-scrollbar {
+     display: none;
+}
+
+.no-scrollbar {
+     scrollbar-width: none;
+}
