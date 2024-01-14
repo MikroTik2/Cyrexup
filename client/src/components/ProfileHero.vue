@@ -71,8 +71,8 @@
                          </div>
 
                          <!-- balance & trade url -->
-                         <button type="button" style="background: linear-gradient(265deg, #237249 6.79%, #35C66B 97.2%);" class="rounded-[15px] w-[100%] mt-4 h-[45px] flex items-center justify-center opacity-100 transition duration-150 ease-in-out hover:opacity-70">ПОПОЛНИТЬ</button>
-                         <button type="button" class="relative mt-2.5 flex items-center justify-between border-dashed border-[0.5px] px-2.5 text-[#3D74FF] text-[12px] w-[100%] gap-1 h-[30px] rounded-[8px] border-[#3D74FF]">
+                         <button type="button" style="background: linear-gradient(265deg, #237249 6.79%, #35C66B 97.2%);" class="rounded-[10px] w-[100%] mt-4 h-[45px] flex items-center justify-center opacity-100 transition duration-150 ease-in-out hover:opacity-70">ПОПОЛНИТЬ</button>
+                         <button @click="toggleTrade" type="button" class="relative mt-2.5 transition duration-150 ease-in-out hover:opacity-70 flex items-center justify-between border-dashed border-[0.5px] px-2.5 text-[#3D74FF] text-[12px] w-[100%] gap-1 h-[30px] rounded-[8px] border-[#3D74FF]">
                               <div class="flex items-center gap-1">
                                    <img src="/svg/trade-link.svg" alt="trade">
                                    Trade URL ССЫЛКА
@@ -353,6 +353,8 @@
                     </div>
                </div>
           </div>
+
+          <ModelTradeUrl :isVisibleTradeurl="isVisibleTradeurl" @close-trade="toggleTrade"/>
      </div> 
 </template>
 
@@ -360,8 +362,12 @@
      import { ref, watch } from 'vue';
      import { useRoute, useRouter } from 'vue-router';
 
+     import ModelTradeUrl from '@/components/ModelTradeUrl.vue';
+
      const route = useRoute();
      const router = useRouter();
+
+     const isVisibleTradeurl = ref(false);
 
      const c = ref('COPY');
      const r = ref('https:/cyrexup.com/ref/lk423s');
@@ -387,6 +393,16 @@
           setTimeout(() => {
                c.value = 'COPY';
           }, 3000);
+     };
+     
+     const toggleTrade = () => {
+          isVisibleTradeurl.value = !isVisibleTradeurl.value;
+
+          if (isVisibleTradeurl.value) {
+               document.body.style.overflow = 'hidden';
+          } else {
+               document.body.style.overflow = '';
+          }
      };
      
      const handleButtonClick = (count, width) => {
