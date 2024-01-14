@@ -26,12 +26,11 @@
      --blue-400: #4277FF;
      --green-100: #57AF77;
      --green-200: #345B42;
-     --container-w: min(calc(100svw - var(--chat-w) - 1.25rem * 2), 75rem);
 }
 
 :root {
      --inventory-h: 13.75rem;
-     --container-w: min(calc(100svw - var(--chat-w) - 1.25rem * 2), 75rem);
+     ---index: calc(1vw + 1vh) ;
      --chat-w: 20rem;
      --matches-coupon-h: 3.75rem;
      -webkit-tap-highlight-color: transparent;

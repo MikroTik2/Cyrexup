@@ -2,8 +2,8 @@
     <div class="w-full mx-auto">
          <SliderIndex class="2xl:w-[90rem]  sm:min-w-[15rem]"/>
          <div class="max-w-full mx-auto w-[90rem] grid xl:grid-cols-2 gap-2.5 md:gap-[.9375rem] mt-2">
-              <div class="w-full bg-[#16191B] p-5 rounded-[.625rem] mx-auto">
-                   <div class="grid w-[12.5rem] sm:w-[17.625rem] md:w-[25.9375rem]">
+              <div class="w-full bg-[#16191B] p-5 rounded-[.625rem] mx-auto overflow-hidden">
+                   <div class="grid w-[12.5rem] sm:w-[17.625rem] md:w-[25.9375rem] ">
                         <!-- title -->
                         <h2 class="text-[.8125rem] sm:text-[.9375rem] md:text-[1.875rem] font-bold">Активные конкурсы</h2>
                         <!-- desc -->
@@ -29,12 +29,9 @@
               </div>
               <div class="w-full bg-[#16191B] rounded-[.625rem] mx-auto mt-1 md:mt-0 p-[.625rem] md:p-[.9375rem] lg:p-[1.25rem]">
               <!-- title -->
-              <div class="w-full mx-auto">
-                   <h2 class="text-[.625rem] sm:text-[.9375rem] md:text-[1.5625rem] lg:text-[1.875rem] text-3xl font-extrabold uppercase text-center md:mb-[.625rem]">Топ игроков</h2>
-                   <!-- absolute block top-[60%] left-[35%] xl:left-[35%] oriin-[50%_50%] -->
-              </div>
+                   <img src="/svg/top-icon.svg" alt="top" class="w-[200px] h-[37px] sm:w-[17.4375rem] sm:h-[3.0625rem] mx-auto">
               <!-- item -->
-              <div class="grid grid-cols-3 gap-2 md:gap-5 mx-auto w-full">
+              <div class="grid grid-cols-3 gap-2 md:gap-5 mx-auto w-full mt-2 sm:mt-2.5">
                    <IndexItem/>
                    <IndexItem/>
                    <IndexItem/>

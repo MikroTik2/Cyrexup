@@ -66,7 +66,7 @@
                          </div>
 
                          <!-- balance & trade url -->
-                         <button type="button" style="background: linear-gradient(265deg, #237249 6.79%, #35C66B 97.2%);" class="rounded-[15px] w-[100%] mt-4 h-[45px] flex items-center justify-center opacity-100 transition duration-150 ease-in-out hover:opacity-70">ПОПОЛНИТЬ</button>
+                         <Button ></Button>
                          <button type="button" class="relative mt-2.5 flex items-center justify-between border-dashed border-[0.5px] px-2.5 text-[#3D74FF] text-[12px] w-[100%] gap-1 h-[30px] rounded-[8px] border-[#3D74FF]">
                               <div class="flex items-center gap-1">
                                    <img src="/svg/trade-link.svg" alt="trade">
@@ -83,7 +83,7 @@
                                    <h3 class="font-[Gilroy-Bold] text-[15px]">Промокод</h3>
                               </div>
 
-                              <input style="padding: 8px 0 8px 5px;" type="text" class="rounded-[5px] text-[#484848] text-[12px] mt-3 mb-2 h-[30px] bg-[#202124] outline-none" placeholder="Введите промокод" >
+                              <input  type="text" class="p-[8px_0_8px_5px] rounded-[5px] text-white text-[12px] mt-3 mb-2 h-[30px] bg-[#202124] outline-none" placeholder="Введите промокод" >
                               <button type="button" style="background: linear-gradient(90deg, #76A0FF 0%, #0167C6 88.54%, #0167C6 100%);" class="btn px-2.5 rounded-[5px] flex justify-between items-center h-[35px] opacity-100 transition duration-150 ease-in-out hover:opacity-70">
                               
                                    Активировать
