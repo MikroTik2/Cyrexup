@@ -1,10 +1,10 @@
 <template>
      <div class="m-auto max-w-[1165px] mt-[65px]">
-          <div class="flex flex-col gap-[25px]">
+          <div class="flex flex-col gap-[15px] md:gap-[25px]">
                <div class="grid-cols-12">
 
                     <!-- routes mobile -->
-                    <div class="no-scrollbar grow relative bg-[#16181B] h-[50px] z-1 max-w-full rounded-[15px] overflow-auto whitespace-nowrap text-tiny font-bold max-lg:rounded-lg] max-lg:only:pr-0 lg:overflow-visible lg:bg-transparent flex lg:hidden">
+                    <ul class="no-scrollbar z-[1] grow gap-[30px] relative z-1 flex max-w-full overflow-auto whitespace-nowrap bg-[#16181B] text-tiny font-bold items-center text-[18px] max-lg:rounded-lg h-[50px] max-lg:pr-14 max-lg:only:pr-0 lg:overflow-visible lg:bg-transparent lg:hidden">
 
                          <div
                               role="presentation"
@@ -12,36 +12,41 @@
                               :style="{ transform: `translateX(${b}px)`, width: `${w}px` }">
                          </div>
 
-                         <router-link @click="handleButtonClick(0, 128.75)" to="/profile" class="z-10 px-[15px] mr-8 gap-[3px] text-[18px] flex items-center">
-                              <img src="/svg/routes/profile-icon.svg" alt="profile">
+                         <li>
+                              <router-link @click="handleButtonClick(0, 129)" to="/profile" class="flex justify-center relative w-[129px] h-[50px] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                   <img width="21" height="21" src="/svg/routes/profile-icon.svg" alt="profile">
+                                   <span>Профиль</span>
+                              </router-link>
+                         </li>
 
-                              <span class="leading-[normal]">Профиль</span>
-                         </router-link>
+                         <li>
+                              <router-link @click="handleButtonClick(160, 150)" to="/profile/inventory" class="flex justify-center relative w-[150px] h-[50px] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                   <img width="21" height="21" src="/svg/routes/inventory-icon.svg" alt="inventory">
+                                   Инвентарь
+                              </router-link>
+                         </li>
 
-                         <router-link @click="handleButtonClick(126, 146.83)" to="/profile/inventory" class="z-10 gap-[3px] text-[18px] flex items-center">
-                              <img src="/svg/routes/inventory-icon.svg" alt="inventory">
+                         <li>
+                              <router-link @click="handleButtonClick(340, 123.59)" to="/profile" class="flex justify-center relative w-[123.59px] h-[50px] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                   <img width="21" height="21" src="/svg/routes/arrow-up-icon.svg" alt="arrow-up">
+                                   Выводы
+                              </router-link>
+                         </li>
 
-                              <span class="leading-[normal]">Инвентарь</span>
-                         </router-link>
+                         <li>
+                              <router-link @click="handleButtonClick(493, 170)" to="/profile" class="flex justify-center relative w-[170px] h-[50px] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                   <img width="21" height="21" src="/svg/routes/profile-icon.svg" alt="profile">
+                                   Реф. система
+                              </router-link>
+                         </li>
 
-                         <div @click="handleButtonClick(276, 118.59)" to="/profile/conclusions" class="z-10 gap-[3px] text-[18px] flex items-center">
-                              <img src="/svg/routes/arrow-up-icon.svg" alt="arrow-up">
-
-                              <span class="leading-[normal]">Выводы</span>
-                         </div>
-
-                         <div @click="handleButtonClick(394, 165.03)" to="/profile/referral" class="z-10 gap-[3px] text-[18px] flex items-center">
-                              <img src="/svg/routes/users-icon.svg" alt="users-ref">
-
-                              <span class="leading-[normal]">Реф. система</span>
-                         </div>
-
-                         <div @click="handleButtonClick(559, 158.23)" to="/profile/history" class="z-10 gap-[3px] text-[18px] flex items-center">
-                              <img src="/svg/routes/history-icon.svg" alt="history">
-
-                              <span class="leading-[normal]">История игр</span>
-                         </div>
-                    </div>
+                         <li>
+                              <router-link @click="handleButtonClick(693, 163)" to="/profile" class="flex justify-center relative w-[163.23px] h-[50px] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                   <img width="21" height="21" src="/svg/routes/profile-icon.svg" alt="profile">
+                                   История игр
+                              </router-link>
+                         </li>
+                    </ul>
 
                     <!-- Profile info -->
                     <div class="rounded-[15px] h-[100%] w-[100%] bg-[#16181B] px-6 py-4">
@@ -95,70 +100,73 @@
                     </div>
 
                     <!-- analytics -->
-                    <div class="rounded-[15px] flex flex-col gap-[15px] w-[100%]">
+                    <div class="rounded-[15px] flex flex-col gap-[15px] lg:overflow-auto lg:whitespace-nowrap ">
                          
                          <!-- routes -->
-                         <div class="rounded-[10px] relative bg-[#16181B] h-[50px] hidden overflow-auto whitespace-nowrap lg:flex">
-
+                         <ul class="no-scrollbar grow gap-[30px] relative z-1 rounded-[15px] overflow-auto whitespace-nowrap bg-[#16181B] text-ti'ny font-bold items-center text-[18px] h-[50px] max-lg:pr-14 max-lg:only:pr-0 hidden lg:flex">
                               <div
                                    role="presentation"
                                    class="absolute inset-y-0 left-0 z-[1] rounded-lg bg-[#3D74FF] transition-all ease-in duration-100"
                                    :style="{ transform: `translateX(${b}px)`, width: `${w}px` }">
                               </div>
-                         
-                              <router-link @click="handleButtonClick(0, 128.75)" to="/profile" class="z-10 px-[15px] text-[18px] flex just items-center">
-                                   <img src="/svg/routes/profile-icon.svg" alt="profile">
 
-                                   <span class="leading-[normal]">Профиль</span>
-                              </router-link>
-                              <!-- active-class="bg-[#3D74FF] rounded-[8px]" -->
-                              <router-link @click="handleButtonClick(129, 146.83)" to="/profile/inventory" class=" z-10 px-[15px] text-[18px] flex items-center">
-                                   <img src="/svg/routes/inventory-icon.svg" alt="inventory">
+                              <li>
+                                   <router-link @click="handleButtonClick(0, 129)" to="/profile" class="flex justify-center relative w-[129px] h-[50px] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                        <img width="21" height="21" src="/svg/routes/profile-icon.svg" alt="profile">
+                                        <span>Профиль</span>
+                                   </router-link>
+                              </li>
 
-                                   <span class="leading-[normal] ml-[3px]">Инвентарь</span>
-                              </router-link>
+                              <li>
+                                   <router-link @click="handleButtonClick(160, 150)" to="/profile/inventory" class="flex justify-center relative w-[150px] h-[50px] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                        <img width="21" height="21" src="/svg/routes/inventory-icon.svg" alt="inventory">
+                                        Инвентарь
+                                   </router-link>
+                              </li>
 
-                              <div @click="handleButtonClick(275.5, 118.59)" to="/profile/conclusions" class="z-10 px-[15px] text-[18px] flex items-center">
-                                   <img src="/svg/routes/arrow-up-icon.svg" alt="arrow-up">
+                              <li>
+                                   <router-link @click="handleButtonClick(340, 123.59)" to="/profile" class="flex justify-center relative w-[123.59px] h-[50px] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                        <img width="21" height="21" src="/svg/routes/arrow-up-icon.svg" alt="arrow-up">
+                                        Выводы
+                                   </router-link>
+                              </li>
 
-                                   <span class="leading-[normal ml-[3px]">Выводы</span>
-                              </div>
+                              <li>
+                                   <router-link @click="handleButtonClick(493, 170)" to="/profile" class="flex justify-center relative w-[170px] h-[50px] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                        <img width="21" height="21" src="/svg/routes/profile-icon.svg" alt="profile">
+                                        Реф. система
+                                   </router-link>
+                              </li>
 
-                              <div @click="handleButtonClick(394, 165.03)" to="/profile/referral" class="z-10 px-[15px] text-[18px] flex items-center">
-                                   <img src="/svg/routes/users-icon.svg" alt="users-ref">
-
-                                   <span class="leading-[normal] ml-[3px]">Реф. система</span>
-                              </div>
-
-                              <div @click="handleButtonClick(558.5, 158.23)" to="/profile/history" class="z-10 px-[15px] text-[18px] flex items-center">
-                                   <img src="/svg/routes/history-icon.svg" alt="history">
-
-                                   <span class="leading-[normal] ml-[3px]">История игр</span>
-                              </div>
-                         
-                         </div>
+                              <li>
+                                   <router-link @click="handleButtonClick(693, 163)" to="/profile" class="flex justify-center relative w-[163.23px] h-[50px] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                        <img width="21" height="21" src="/svg/routes/profile-icon.svg" alt="profile">
+                                        История игр
+                                   </router-link>
+                              </li>
+                         </ul>
 
                          <!-- analytics user -->
-                         <div class="flex justify-between gap-[10px]" v-if="route.path !== '/profile/inventory'"> 
-                              <div class="rounded-[15px] gap-[20px] flex bg-[#16181B] w-[100%] p-6">
+                         <div class="grid-cols-3 gap-[10px] hidden md:grid" v-if="route.path !== '/profile/inventory'"> 
+                              <div class="rounded-[15px] gap-[20px] flex bg-[#16181B] w-[100%] p-5">
                                    <img src="/svg/controller.svg" alt="controller">
 
-                                   <div class="flex flex-col ">
+                                   <div class="flex flex-col">
                                         <span class="mb-[-10px] text-[25px] font-[Gilroy-Bold]"> {{ game }} 4 </span>
-                                        <span class="text-[#414141] ">Игр сыграно</span>
+                                        <span class="text-[#414141]">Игр сыграно</span>
                                    </div>
                               </div>
 
-                              <div class="rounded-[15px] gap-[20px] flex bg-[#16181B] w-[100%] p-6">
+                              <div class="rounded-[15px] gap-[20px] flex bg-[#16181B] w-[100%] p-5">
                                    <img src="/svg/money.svg" alt="money-sum">
 
                                    <div class="flex flex-col ">
                                         <span class="mb-[-10px] text-[25px] font-[Gilroy-Bold]"> {{ game }} 12 </span>
-                                        <span class="text-[#414141] ">Сумма выигрышей</span>
+                                        <span class="text-[#414141] ">Выигрыши</span>
                                    </div>
                               </div>
 
-                              <div class="rounded-[15px] gap-[20px] flex bg-[#16181B] w-[100%] p-6">
+                              <div class="rounded-[15px] gap-[20px] flex bg-[#16181B] w-[100%] p-5">
                                    <img src="/svg/money-bag.svg" alt="money-bag">
 
                                    <div class="flex flex-col ">
@@ -169,7 +177,68 @@
 
                          </div>
 
-                         <div class="grid grid-cols-3 h-[200px]  gap-[10px] leading-6" v-show="route.path !== '/profile/inventory'">
+                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:h-[200px] gap-[10px] leading-6" v-show="route.path !== '/profile/inventory'">
+
+                              <!-- refferal mobile -->
+                              <div class="bg-[#16181B] md:hidden block px-[8px] py-[22px] rounded-[15px]">
+                                   <div class="grid gap-[3px] grid-cols-2 mb-[10px]">
+                                        <button style="background: linear-gradient(90deg, #76A0FF 0%, #0167C6 88.54%, #0167C6 100%);" class="inline-flex gap-[5px] h-[30px] justify-start rounded-[5px] items-center px-[3px] text-[7px]">
+                                        
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.1375 2.49835C8.37198 2.23647 8.65906 2.02699 8.97999 1.88357C9.30091 1.74015 9.64848 1.66602 10 1.66602C10.3515 1.66602 10.6991 1.74015 11.02 1.88357C11.3409 2.02699 11.628 2.23647 11.8625 2.49835L12.4458 3.15002C12.5292 3.24328 12.6325 3.31657 12.748 3.36446C12.8636 3.41236 12.9884 3.43362 13.1133 3.42669L13.9883 3.37835C14.3392 3.35908 14.6902 3.414 15.0184 3.53952C15.3466 3.66504 15.6447 3.85835 15.8932 4.10683C16.1417 4.3553 16.335 4.65338 16.4605 4.9816C16.586 5.30982 16.6409 5.66081 16.6217 6.01169L16.5733 6.88669C16.5665 7.01144 16.5879 7.13613 16.6357 7.25153C16.6836 7.36693 16.7569 7.47008 16.85 7.55335L17.5025 8.13669C17.7645 8.37118 17.9741 8.6583 18.1176 8.97931C18.2611 9.30031 18.3353 9.64798 18.3353 9.9996C18.3353 10.3512 18.2611 10.6989 18.1176 11.0199C17.9741 11.3409 17.7645 11.628 17.5025 11.8625L16.85 12.4459C16.7567 12.5292 16.6835 12.6325 16.6356 12.7481C16.5877 12.8636 16.5664 12.9885 16.5733 13.1134L16.6217 13.9884C16.6409 14.3392 16.586 14.6902 16.4605 15.0184C16.335 15.3467 16.1417 15.6447 15.8932 15.8932C15.6447 16.1417 15.3466 16.335 15.0184 16.4605C14.6902 16.586 14.3392 16.641 13.9883 16.6217L13.1133 16.5734C12.9886 16.5665 12.8639 16.5879 12.7485 16.6358C12.6331 16.6837 12.5299 16.7569 12.4467 16.85L11.8633 17.5025C11.6288 17.7645 11.3417 17.9741 11.0207 18.1176C10.6997 18.2612 10.352 18.3353 10.0004 18.3353C9.64879 18.3353 9.30113 18.2612 8.98012 18.1176C8.65911 17.9741 8.37199 17.7645 8.1375 17.5025L7.55416 16.85C7.4708 16.7568 7.36751 16.6835 7.25196 16.6356C7.13641 16.5877 7.01156 16.5664 6.88666 16.5734L6.01166 16.6217C5.66079 16.641 5.3098 16.586 4.98157 16.4605C4.65335 16.335 4.35528 16.1417 4.1068 15.8932C3.85832 15.6447 3.66502 15.3467 3.5395 15.0184C3.41398 14.6902 3.35906 14.3392 3.37833 13.9884L3.42666 13.1134C3.43348 12.9886 3.41215 12.8639 3.36426 12.7485C3.31637 12.6331 3.24314 12.53 3.15 12.4467L2.49833 11.8634C2.23631 11.6289 2.02671 11.3417 1.88321 11.0207C1.7397 10.6997 1.66553 10.3521 1.66553 10.0004C1.66553 9.64882 1.7397 9.30115 1.88321 8.98014C2.02671 8.65913 2.23631 8.37201 2.49833 8.13752L3.15 7.55419C3.24325 7.47082 3.31655 7.36754 3.36444 7.25198C3.41234 7.13643 3.4336 7.01158 3.42666 6.88669L3.37833 6.01169C3.35906 5.66081 3.41398 5.30982 3.5395 4.9816C3.66502 4.65338 3.85832 4.3553 4.1068 4.10683C4.35528 3.85835 4.65335 3.66504 4.98157 3.53952C5.3098 3.414 5.66079 3.35908 6.01166 3.37835L6.88666 3.42669C7.01142 3.4335 7.13611 3.41217 7.25151 3.36428C7.3669 3.31639 7.47006 3.24316 7.55333 3.15002L8.1375 2.49835ZM13.0892 6.91085C13.2454 7.06713 13.3332 7.27905 13.3332 7.50002C13.3332 7.72099 13.2454 7.93291 13.0892 8.08919L8.08916 13.0892C7.932 13.241 7.72149 13.325 7.503 13.3231C7.2845 13.3212 7.07549 13.2335 6.92098 13.079C6.76648 12.9245 6.67884 12.7155 6.67694 12.497C6.67504 12.2785 6.75903 12.068 6.91083 11.9109L11.9108 6.91085C12.0671 6.75463 12.279 6.66687 12.5 6.66687C12.721 6.66687 12.9329 6.75463 13.0892 6.91085ZM7.91667 6.66669C7.58514 6.66669 7.2672 6.79838 7.03278 7.0328C6.79836 7.26722 6.66667 7.58517 6.66667 7.91669V7.92502C6.66667 8.25654 6.79836 8.57448 7.03278 8.80891C7.2672 9.04333 7.58514 9.17502 7.91667 9.17502H7.925C8.25652 9.17502 8.57446 9.04333 8.80888 8.80891C9.0433 8.57448 9.175 8.25654 9.175 7.92502V7.91669C9.175 7.58517 9.0433 7.26722 8.80888 7.0328C8.57446 6.79838 8.25652 6.66669 7.925 6.66669H7.91667ZM12.0833 10.8334C11.7518 10.8334 11.4339 10.9651 11.1994 11.1995C10.965 11.4339 10.8333 11.7518 10.8333 12.0834V12.0917C10.8333 12.4232 10.965 12.7412 11.1994 12.9756C11.4339 13.21 11.7518 13.3417 12.0833 13.3417H12.0917C12.4232 13.3417 12.7411 13.21 12.9755 12.9756C13.21 12.7412 13.3417 12.4232 13.3417 12.0917V12.0834C13.3417 11.7518 13.21 11.4339 12.9755 11.1995C12.7411 10.9651 12.4232 10.8334 12.0917 10.8334H12.0833Z" fill="white"/>
+                                             </svg>
+
+                                             <div class="flex flex-col items-center">
+                                                  <span class="w-[100%] leading-[initial] text-left">1%</span>
+                                                  <span class="uppercase leading-[initial] text-[#AAA]">реф. бонус</span>
+                                             </div>
+                                        
+                                        </button>
+                                        <button style="background: linear-gradient(90deg, #76A0FF 0%, #0167C6 88.54%, #0167C6 100%);" class="inline-flex gap-[5px] h-[30px] justify-start rounded-[5px] items-center px-[3px] text-[7px]">
+                                        
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.1375 2.49835C8.37198 2.23647 8.65906 2.02699 8.97999 1.88357C9.30091 1.74015 9.64848 1.66602 10 1.66602C10.3515 1.66602 10.6991 1.74015 11.02 1.88357C11.3409 2.02699 11.628 2.23647 11.8625 2.49835L12.4458 3.15002C12.5292 3.24328 12.6325 3.31657 12.748 3.36446C12.8636 3.41236 12.9884 3.43362 13.1133 3.42669L13.9883 3.37835C14.3392 3.35908 14.6902 3.414 15.0184 3.53952C15.3466 3.66504 15.6447 3.85835 15.8932 4.10683C16.1417 4.3553 16.335 4.65338 16.4605 4.9816C16.586 5.30982 16.6409 5.66081 16.6217 6.01169L16.5733 6.88669C16.5665 7.01144 16.5879 7.13613 16.6357 7.25153C16.6836 7.36693 16.7569 7.47008 16.85 7.55335L17.5025 8.13669C17.7645 8.37118 17.9741 8.6583 18.1176 8.97931C18.2611 9.30031 18.3353 9.64798 18.3353 9.9996C18.3353 10.3512 18.2611 10.6989 18.1176 11.0199C17.9741 11.3409 17.7645 11.628 17.5025 11.8625L16.85 12.4459C16.7567 12.5292 16.6835 12.6325 16.6356 12.7481C16.5877 12.8636 16.5664 12.9885 16.5733 13.1134L16.6217 13.9884C16.6409 14.3392 16.586 14.6902 16.4605 15.0184C16.335 15.3467 16.1417 15.6447 15.8932 15.8932C15.6447 16.1417 15.3466 16.335 15.0184 16.4605C14.6902 16.586 14.3392 16.641 13.9883 16.6217L13.1133 16.5734C12.9886 16.5665 12.8639 16.5879 12.7485 16.6358C12.6331 16.6837 12.5299 16.7569 12.4467 16.85L11.8633 17.5025C11.6288 17.7645 11.3417 17.9741 11.0207 18.1176C10.6997 18.2612 10.352 18.3353 10.0004 18.3353C9.64879 18.3353 9.30113 18.2612 8.98012 18.1176C8.65911 17.9741 8.37199 17.7645 8.1375 17.5025L7.55416 16.85C7.4708 16.7568 7.36751 16.6835 7.25196 16.6356C7.13641 16.5877 7.01156 16.5664 6.88666 16.5734L6.01166 16.6217C5.66079 16.641 5.3098 16.586 4.98157 16.4605C4.65335 16.335 4.35528 16.1417 4.1068 15.8932C3.85832 15.6447 3.66502 15.3467 3.5395 15.0184C3.41398 14.6902 3.35906 14.3392 3.37833 13.9884L3.42666 13.1134C3.43348 12.9886 3.41215 12.8639 3.36426 12.7485C3.31637 12.6331 3.24314 12.53 3.15 12.4467L2.49833 11.8634C2.23631 11.6289 2.02671 11.3417 1.88321 11.0207C1.7397 10.6997 1.66553 10.3521 1.66553 10.0004C1.66553 9.64882 1.7397 9.30115 1.88321 8.98014C2.02671 8.65913 2.23631 8.37201 2.49833 8.13752L3.15 7.55419C3.24325 7.47082 3.31655 7.36754 3.36444 7.25198C3.41234 7.13643 3.4336 7.01158 3.42666 6.88669L3.37833 6.01169C3.35906 5.66081 3.41398 5.30982 3.5395 4.9816C3.66502 4.65338 3.85832 4.3553 4.1068 4.10683C4.35528 3.85835 4.65335 3.66504 4.98157 3.53952C5.3098 3.414 5.66079 3.35908 6.01166 3.37835L6.88666 3.42669C7.01142 3.4335 7.13611 3.41217 7.25151 3.36428C7.3669 3.31639 7.47006 3.24316 7.55333 3.15002L8.1375 2.49835ZM13.0892 6.91085C13.2454 7.06713 13.3332 7.27905 13.3332 7.50002C13.3332 7.72099 13.2454 7.93291 13.0892 8.08919L8.08916 13.0892C7.932 13.241 7.72149 13.325 7.503 13.3231C7.2845 13.3212 7.07549 13.2335 6.92098 13.079C6.76648 12.9245 6.67884 12.7155 6.67694 12.497C6.67504 12.2785 6.75903 12.068 6.91083 11.9109L11.9108 6.91085C12.0671 6.75463 12.279 6.66687 12.5 6.66687C12.721 6.66687 12.9329 6.75463 13.0892 6.91085ZM7.91667 6.66669C7.58514 6.66669 7.2672 6.79838 7.03278 7.0328C6.79836 7.26722 6.66667 7.58517 6.66667 7.91669V7.92502C6.66667 8.25654 6.79836 8.57448 7.03278 8.80891C7.2672 9.04333 7.58514 9.17502 7.91667 9.17502H7.925C8.25652 9.17502 8.57446 9.04333 8.80888 8.80891C9.0433 8.57448 9.175 8.25654 9.175 7.92502V7.91669C9.175 7.58517 9.0433 7.26722 8.80888 7.0328C8.57446 6.79838 8.25652 6.66669 7.925 6.66669H7.91667ZM12.0833 10.8334C11.7518 10.8334 11.4339 10.9651 11.1994 11.1995C10.965 11.4339 10.8333 11.7518 10.8333 12.0834V12.0917C10.8333 12.4232 10.965 12.7412 11.1994 12.9756C11.4339 13.21 11.7518 13.3417 12.0833 13.3417H12.0917C12.4232 13.3417 12.7411 13.21 12.9755 12.9756C13.21 12.7412 13.3417 12.4232 13.3417 12.0917V12.0834C13.3417 11.7518 13.21 11.4339 12.9755 11.1995C12.7411 10.9651 12.4232 10.8334 12.0917 10.8334H12.0833Z" fill="white"/>
+                                             </svg>
+
+                                             <div class="flex flex-col items-center">
+                                                  <span class="w-[100%] leading-[initial] text-left">0.00%</span>
+                                                  <span class="uppercase leading-[initial] text-[#AAA]">реф. баланс</span>
+                                             </div>
+                                   
+                                        </button>
+
+                                        <button style="background: linear-gradient(90deg, #76A0FF 0%, #0167C6 88.54%, #0167C6 100%);" class="inline-flex h-[30px] rounded-[5px] justify-center items-center px-[3px] text-[7px] col-span-2 w-[100%]">
+                                        
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.1375 2.49835C8.37198 2.23647 8.65906 2.02699 8.97999 1.88357C9.30091 1.74015 9.64848 1.66602 10 1.66602C10.3515 1.66602 10.6991 1.74015 11.02 1.88357C11.3409 2.02699 11.628 2.23647 11.8625 2.49835L12.4458 3.15002C12.5292 3.24328 12.6325 3.31657 12.748 3.36446C12.8636 3.41236 12.9884 3.43362 13.1133 3.42669L13.9883 3.37835C14.3392 3.35908 14.6902 3.414 15.0184 3.53952C15.3466 3.66504 15.6447 3.85835 15.8932 4.10683C16.1417 4.3553 16.335 4.65338 16.4605 4.9816C16.586 5.30982 16.6409 5.66081 16.6217 6.01169L16.5733 6.88669C16.5665 7.01144 16.5879 7.13613 16.6357 7.25153C16.6836 7.36693 16.7569 7.47008 16.85 7.55335L17.5025 8.13669C17.7645 8.37118 17.9741 8.6583 18.1176 8.97931C18.2611 9.30031 18.3353 9.64798 18.3353 9.9996C18.3353 10.3512 18.2611 10.6989 18.1176 11.0199C17.9741 11.3409 17.7645 11.628 17.5025 11.8625L16.85 12.4459C16.7567 12.5292 16.6835 12.6325 16.6356 12.7481C16.5877 12.8636 16.5664 12.9885 16.5733 13.1134L16.6217 13.9884C16.6409 14.3392 16.586 14.6902 16.4605 15.0184C16.335 15.3467 16.1417 15.6447 15.8932 15.8932C15.6447 16.1417 15.3466 16.335 15.0184 16.4605C14.6902 16.586 14.3392 16.641 13.9883 16.6217L13.1133 16.5734C12.9886 16.5665 12.8639 16.5879 12.7485 16.6358C12.6331 16.6837 12.5299 16.7569 12.4467 16.85L11.8633 17.5025C11.6288 17.7645 11.3417 17.9741 11.0207 18.1176C10.6997 18.2612 10.352 18.3353 10.0004 18.3353C9.64879 18.3353 9.30113 18.2612 8.98012 18.1176C8.65911 17.9741 8.37199 17.7645 8.1375 17.5025L7.55416 16.85C7.4708 16.7568 7.36751 16.6835 7.25196 16.6356C7.13641 16.5877 7.01156 16.5664 6.88666 16.5734L6.01166 16.6217C5.66079 16.641 5.3098 16.586 4.98157 16.4605C4.65335 16.335 4.35528 16.1417 4.1068 15.8932C3.85832 15.6447 3.66502 15.3467 3.5395 15.0184C3.41398 14.6902 3.35906 14.3392 3.37833 13.9884L3.42666 13.1134C3.43348 12.9886 3.41215 12.8639 3.36426 12.7485C3.31637 12.6331 3.24314 12.53 3.15 12.4467L2.49833 11.8634C2.23631 11.6289 2.02671 11.3417 1.88321 11.0207C1.7397 10.6997 1.66553 10.3521 1.66553 10.0004C1.66553 9.64882 1.7397 9.30115 1.88321 8.98014C2.02671 8.65913 2.23631 8.37201 2.49833 8.13752L3.15 7.55419C3.24325 7.47082 3.31655 7.36754 3.36444 7.25198C3.41234 7.13643 3.4336 7.01158 3.42666 6.88669L3.37833 6.01169C3.35906 5.66081 3.41398 5.30982 3.5395 4.9816C3.66502 4.65338 3.85832 4.3553 4.1068 4.10683C4.35528 3.85835 4.65335 3.66504 4.98157 3.53952C5.3098 3.414 5.66079 3.35908 6.01166 3.37835L6.88666 3.42669C7.01142 3.4335 7.13611 3.41217 7.25151 3.36428C7.3669 3.31639 7.47006 3.24316 7.55333 3.15002L8.1375 2.49835ZM13.0892 6.91085C13.2454 7.06713 13.3332 7.27905 13.3332 7.50002C13.3332 7.72099 13.2454 7.93291 13.0892 8.08919L8.08916 13.0892C7.932 13.241 7.72149 13.325 7.503 13.3231C7.2845 13.3212 7.07549 13.2335 6.92098 13.079C6.76648 12.9245 6.67884 12.7155 6.67694 12.497C6.67504 12.2785 6.75903 12.068 6.91083 11.9109L11.9108 6.91085C12.0671 6.75463 12.279 6.66687 12.5 6.66687C12.721 6.66687 12.9329 6.75463 13.0892 6.91085ZM7.91667 6.66669C7.58514 6.66669 7.2672 6.79838 7.03278 7.0328C6.79836 7.26722 6.66667 7.58517 6.66667 7.91669V7.92502C6.66667 8.25654 6.79836 8.57448 7.03278 8.80891C7.2672 9.04333 7.58514 9.17502 7.91667 9.17502H7.925C8.25652 9.17502 8.57446 9.04333 8.80888 8.80891C9.0433 8.57448 9.175 8.25654 9.175 7.92502V7.91669C9.175 7.58517 9.0433 7.26722 8.80888 7.0328C8.57446 6.79838 8.25652 6.66669 7.925 6.66669H7.91667ZM12.0833 10.8334C11.7518 10.8334 11.4339 10.9651 11.1994 11.1995C10.965 11.4339 10.8333 11.7518 10.8333 12.0834V12.0917C10.8333 12.4232 10.965 12.7412 11.1994 12.9756C11.4339 13.21 11.7518 13.3417 12.0833 13.3417H12.0917C12.4232 13.3417 12.7411 13.21 12.9755 12.9756C13.21 12.7412 13.3417 12.4232 13.3417 12.0917V12.0834C13.3417 11.7518 13.21 11.4339 12.9755 11.1995C12.7411 10.9651 12.4232 10.8334 12.0917 10.8334H12.0833Z" fill="white"/>
+                                             </svg>
+
+                                             <div class="flex flex-col items-center">
+                                                  <span class="w-[100%] leading-[initial] text-left">0%</span>
+                                                  <span class="uppercase leading-[initial] text-[#AAA]">пополнений</span>
+                                             </div>
+
+                                        </button>
+                                   </div>
+
+                                   <!-- refferal system -->
+                                   <div>
+                                        <h3 class="text-[10px] text-center mb-[4px] leading-none">Реферальная система</h3>
+
+                                        <button style="background: linear-gradient(90deg, #76A0FF 0%, #0167C6 88.54%, #0167C6 100%);" class="h-[25px] w-[100%] rounded-[5px] text-[10px]">Перейти</button>
+                                   </div>
+
+                                   <div class="flex items-center gap-[5px] mt-[15px]">
+                                        <div style="border: 1px solid #3870FF;" id="copyRef" class="w-[100%] text-[9px] flex items-center h-[20px] px-2.5 bg-[#16181B] rounded-[5px]">{{ r }}</div>
+
+                                        <button style="background: linear-gradient(135deg, #0D6CCB 0%, #729EFD 100%);" type="button" class="w-[20px] h-[20px] rounded-[5px] flex items-center justify-center" @click="copyText">
+                                             <img src="/svg/copy.svg" class="w-[14px] h-[14px]" alt="copy" v-if="c === 'COPY'">
+                                             <img src="/svg/checkmark-icon.svg" class="w-[14px] h-[14px]"  alt="checkmark" v-else-if="c === 'OK'">
+                                        </button>
+                                   </div>
+                              </div>
+
+                              <!-- level -->
                               <div class="bg-[#16181B] py-[17px] rounded-[15px]">
                                    <div class="flex shrink-0 flex-col rounded-3xl bg-gradient-var ">
                                         <div class="relative  mx-auto w-[80px]">
@@ -182,16 +251,17 @@
                                         </div>
                                    
                                         <div class="mt-1 text-center text-[18px] uppercase">Уровень</div>
-                                        <div class="mt-auto pt-2 text-center">
-                                             <div class="pb-0.5 text-center font-semibold text-[#3870FF]">0.00$ / 
+                                        <div class="mt-auto pt-2 text-center leading-none">
+                                             <div class="pb-0.5 text-center font-semibold text-[#3870FF] text-[12px] md:text-[14px]">0.00$ / 
                                                   <span class="text-[#3870FF]">200.00$</span>
                                              </div>
-                                             <div class="text-nano uppercase text-white">До нового уровня</div>
+                                             <div class="text-nano uppercase text-white text-[12px] md:text-[14px]">До нового уровня</div>
                                         </div>
                                    </div>
                               </div>
 
-                              <div class="col-span-2 grid gap-[15px]">
+                              <!-- reffral -->
+                              <div class="col-span-2 hidden md:grid gap-[15px]">
                                    <div class="bg-[#16181B] rounded-[15px] py-[15px] px-[20px]">
                                         <span class="text-[20px] flex items-center">Рефералы <span class="block ml-1 text-center leading-[1.5] text-[13px] h-[18px] w-[33px] bg-[#3870FF] rounded-[5px]">23</span> </span>
 
@@ -241,49 +311,47 @@
                </div>
 
                <div>
-                    <div class="flex gap-[5px] mb-[15px]"> 
+                    <div class="md:flex hidden gap-[5px] mb-[15px]"> 
                          <img src="/svg/baseline.svg" alt="baseline">
                          <span class="text-[#3F4041] text-[24px] font-['Gilroy-Medium']">Настройки</span>
                     </div>
 
-                    <div class="grid gap-[10px] grid-cols-2 lg:grid-cols-4">
-                         <div class="rounded-[15px] flex gap-6 py-4 px-5 bg-[#16181B]">
+                    <div class="grid gap-[10px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                         <div class="rounded-[15px] max-w-[100%] flex gap-[10px] md:gap-[20px] py-4 px-5 bg-[#16181B]">
                               <img class="object-contain" src="/svg/settings/notification.png" alt="notification">
 
                               <div class="flex flex-col gap-2">
-                                   <span class="text=[16px]">Уведомления</span>
-                                   <button class="rounded-[5px] text-[#4277FF] text-[12px] bg-[#3D74FF78] w-[105px] h-[22px]">Выключены</button>
+                                   <span class="sm:text-[16px]">Уведомления</span>
+                                   <button class="rounded-[5px] text-[#4277FF] text-[12px] bg-[#3D74FF78] w-[105px] h-[20px]">Выключены</button>
                               </div>
                          </div>
-                         <div class="rounded-[15px] flex gap-6 py-4 px-5 bg-[#16181B]">
+                         <div class="rounded-[15px] max-w-[100%] flex gap-[10px] md:gap-[20px] py-4 px-5 bg-[#16181B] ">
                               <img src="/svg/settings/steam.svg" alt="steam">
                          
                               <div class="flex flex-col gap-2">
-                                   <span class="text=[16px]">Steam Аккаунт</span>
-                                   <button class="rounded-[5px] text-[#4277FF] text-[12px] bg-[#3D74FF78] w-[105px] h-[22px]">Не привязан</button>
+                                   <span class="sm:text-[16px]">Steam Аккаунт</span>
+                                   <button class="rounded-[5px] text-[#4277FF] text-[12px] bg-[#3D74FF78] w-[105px] h-[20px]">Не привязан</button>
                               </div>
                          </div>
-                         <div class="rounded-[15px] flex gap-6 py-4 px-5 bg-[#16181B]">
+                         <div class="rounded-[15px] max-w-[100%] flex gap-[10px] md:gap-[20px] py-4 px-5 bg-[#16181B]">
                               <img src="/svg/settings/telegram.svg" alt="telegram">
 
                               <div class="flex flex-col gap-2">
-                                   <span class="text=[16px]">Telegram Аккаунт</span>
-                                   <button class="rounded-[5px] text-[#4277FF] text-[12px] bg-[#3D74FF78] w-[105px] h-[22px]">Не привязан</button>
+                                   <span class="sm:text-[16px]">Telegram Аккаунт</span>
+                                   <button class="rounded-[5px] text-[#4277FF] text-[12px] bg-[#3D74FF78] w-[105px] h-[20px]">Не привязан</button>
                               </div>
                          
                          </div>
-                         <div class="rounded-[15px] flex gap-6 py-4 px-5 bg-[#16181B]">
+                         <div class="rounded-[15px] max-w-[100%] flex gap-[10px] md:gap-[20px] py-4 px-5 bg-[#16181B]">
                               <img src="/svg/settings/vk.svg" alt="vk">
                          
                               <div class="flex flex-col gap-2">
-                                   <span class="text=[16px]">Telegram Аккаунт</span>
-                                   <button class="rounded-[5px] text-[#4277FF] text-[12px] bg-[#3D74FF78] w-[105px] h-[22px]">Не привязан</button>
+                                   <span class="sm:text-[16px]">Telegram Аккаунт</span>
+                                   <button class="rounded-[5px] text-[#4277FF] sm:text-[12px] bg-[#3D74FF78] w-[105px] h-[20px]">Не привязан</button>
                               </div>
                          </div>
-
                     </div>
                </div>
-               
           </div>
      </div> 
 </template>
