@@ -1,6 +1,6 @@
 <template>
     <div class="w-full mx-auto">
-         <SliderIndex class="2xl:w-[90rem]  sm:min-w-[15rem]"/>
+         <SliderIndex class="2xl:max-w-[90rem]  sm:min-w-[15rem]"/>
          <div class="max-w-full mx-auto w-[90rem] grid xl:grid-cols-2 gap-2.5 md:gap-[.9375rem] mt-2">
               <div class="w-full bg-[#16191B] p-5 rounded-[.625rem] mx-auto overflow-hidden">
                    <div class="grid w-[12.5rem] sm:w-[17.625rem] md:w-[25.9375rem] ">
@@ -21,11 +21,8 @@
                         <button class="w-[6.25rem] sm:w-[8.125rem] md:w-[10.3125rem] h-[1.5625rem] sm:h-[1.875rem] md:h-[2.5rem] text-blue-500 bg-[#1E2024] justify-center flex items-center gap-[.1875rem] rounded-[.3125rem] font-bold text-[.625rem] sm:text-xs md:text-[.9375rem] mt-2.5 md:mt-[2.1875rem]">
                              <p>Участвовать</p>
                              <img class="w-[.8125rem] sm:w-[1.125rem]" src="/svg/arrow.svg" alt="arrow">
-                        </button>
-                        <!-- <div class="max-w-full w-">
-                             <SliderItems/>
-                        </div> -->
-                   </div>
+                         </button>
+                    </div>
               </div>
               <div class="w-full bg-[#16191B] rounded-[.625rem] mx-auto mt-1 md:mt-0 p-[.625rem] md:p-[.9375rem] lg:p-[1.25rem]">
               <!-- title -->

@@ -13,8 +13,9 @@
     :modules="modules"
     class="mySwiper"
     >
-      <swiper-slide><img class="w-full" src="/img/banner.jpg" alt="snowman"></swiper-slide>
-      <swiper-slide><img class="w-full" src="/img/banner.jpg" alt="snowman"></swiper-slide><swiper-slide><img class="w-full" src="/img/banner.jpg" alt="snowman"></swiper-slide>
+      <swiper-slide ><img src="/img/banner.jpg" alt="snowman"></swiper-slide>
+      <swiper-slide ><img src="/img/banner.jpg" alt="snowman"></swiper-slide>
+      <swiper-slide ><img src="/img/banner.jpg" alt="snowman"></swiper-slide>
     </swiper>
   </template>
 <script>

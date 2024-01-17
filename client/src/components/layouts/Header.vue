@@ -24,10 +24,10 @@
                <a href="/profile" class="flex items-center gap-1.5 shrink-0 ml-1 mr-[10px] lg:mr-[30px]  w-8.5 lg:w-11.5">
                
                     <!-- there avatar user -->
-                    <img src="https://avatars.githubusercontent.com/u/111369356?v=4" alt="photo" loading="lazy" class="w-[32px] h-[32px] lg:w-[45px] lg:h-[45px] rounded-[100px] border-none object-cover">
+                    <img src="/img/ava.png" alt="photo" loading="lazy" class="w-[32px] h-[32px] lg:w-[45px] lg:h-[45px] rounded-[100px] border-none object-cover">
 
                     <div class="flex flex-col justify-center">
-                         <span class="text-[14px] lg:text-lg" style="line-height: 1rem;">Чемпион</span>
+                         <span class="text-[14px] lg:text-lg" style="line-height: 1rem;">Studio</span>
                          <span class="leading-none text-[var(--green-100)] text-[14px] md:text-[16px] font-bold">1500 <span class="text-[var(--green-200)] font-bold">$</span></span>
                     </div>
 
@@ -50,7 +50,7 @@
                </button>
 
                <button class="flex lg:hidden" @click="toggleMenu">
-                    <img src="/svg/burger.svg" alt="menu"/>
+                    <img class="w-full" src="/svg/burger.svg" alt="menu"/>
                </button>
           </div>
 

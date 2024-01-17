@@ -8,7 +8,8 @@
                 'btn--logout' : logoutBtn,
                 'btn--activate' : activateBtn,
                 'btn--copyBtn' : copyBtn,
-                'btn--participate' : runBtn,
+                'btn--rate' : rateBtn,
+                
         }]"
         >
         <slot />
@@ -24,7 +25,7 @@
             'btn--blue': color === 'blue',
             'btn--logout' : logoutBtn,
             'btn--activate' : activateBtn,
-            'btn--participate' : runBtn,
+            'btn--rate' : rateBtn,
         }]"
     
     >    
@@ -39,30 +40,42 @@
             type: String,
             required: false
         },
+
         color: {
             type: String,
             required: false
         },
+
         background: {
             type: String,
             required: false
         },
+
         logoutBtn: {
             type: Boolean,
             required: false
         },
+
         activateBtn: {
             type: Boolean,
             required: false
         },
+
         copyBtn: {
             type: Boolean,
             required: false
         },
+        
         runBtn: {
             type: Boolean,
             required: false
         },
+
+        rateBtn: {
+            type: Boolean,
+            required: false
+        },
+
         type: {
             type: String,
             default: 'button'

@@ -64,13 +64,13 @@ footer, header, hgroup, menu, nav, section {
 }
 
 html body {
-     background-image: url('/img/background.jpg');
      display: block;
      min-height: 80px;
      width: 100%;
      float: left;
      position: relative;
      padding: 0;
+     background-image: url('/img/background.jpg');
      -webkit-background-size: cover;
      background-size: cover;
      background-position: center center;
@@ -103,6 +103,16 @@ img {
      display: grid;
      gap: 15px;
      grid-template-columns: 30% 1fr;
+
+     @media only screen and (max-width: 1023px) {
+          grid-template-columns: repeat(1, 1fr);
+     }
+}
+
+.grid-cols-6 {
+     display: grid;
+     gap: 10px;
+     grid-template-columns: 50% 2fr;
 
      @media only screen and (max-width: 1023px) {
           grid-template-columns: repeat(1, 1fr);
