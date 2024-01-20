@@ -33,8 +33,8 @@
         transform: rotateZ(45deg);
         perspective: 1000px;
         border-radius: 50%;
-        width: 58px;
-        height: 58px;
+        width: 63px;
+        height: 63px;
         color: #fff;
       }
         .loader:before,
