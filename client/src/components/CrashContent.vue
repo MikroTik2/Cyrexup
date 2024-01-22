@@ -16,20 +16,20 @@
     
                 
                 <!-- bid -->
-                <div class="relative bg-[#16191B] rounded-[15px] ">
+                <div class="bg-[#16191B] rounded-[15px] relative z-0">
                     <div class="float-left flex flex-col items-center m-2">
-                        <img src="/img/MAC-10.png" alt="mac-10" class="w-[75%] md:w-[100%] mb-2">
-                        <p class="text-[12px] md:text-[15px] font-black"><span class="text-orange-400">StatTrak™</span> MAC-10<br/> <span class="text-blue-400 px-5 md:px-6">Neon Rider</span></p>
+                        <img src="/img/MAC-10.png" alt="mac-10" class="w-[75%] md:w-[95%] mb-2">
+                        <p class="text-[10px] md:text-[12px] font-black"><span class="text-orange-400">StatTrak™</span> MAC-10<br/> <span class="text-blue-400 px-5 md:px-6">Neon Rider</span></p>
                     </div>
-                    <img src="/img/crash-rate-light.png" alt="mac-10" class="absolute w-[220px]">
+                    <img src="/img/crash-rate-light.png" alt="mac-10" class="absolute -z-10 w-[200px]">
                     <div class="float-right p-5">
-                        <div class="flex mx-auto">
-                            <h2 class="text-[20px] md:text-[50px] font-semibold">0.00</h2>
+                        <div class="flex mx-auto mb-1">
+                            <h2 class="text-[15px] md:text-[40px] font-semibold">0.00</h2>
                             <img class="w-[15%] md:w-[25%]" src="/svg/arrow-right.svg" alt=">">
-                            <h2 class="text-[20px] md:text-[50px] font-semibold">0.00</h2>
+                            <h2 class="text-[15px] md:text-[40px] font-semibold">0.00</h2>
                         </div>
                         <div class="flex bg-[#1E2327] items-center justify-between rounded-[10px] px-3 py-2">
-                            <p class="sm:text-sm md:text-xl font-bold">0$</p>
+                            <p class="text-[12px] sm:text-sm md:text-xl font-bold">0$</p>
     
                             <div class="gap-1 md:gap-2 flex">
                                 <button type="button" class="rounded-[5px] text-[12px] md:text-[16px] bg-[#272E33] px-1.5 py-0.5 md:px-3 md:py-1">1.5х</button>

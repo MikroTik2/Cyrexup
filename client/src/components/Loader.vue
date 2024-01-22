@@ -4,29 +4,29 @@
     </div>
   </template>
   
-  <script setup>
-  import { ref, onMounted } from 'vue';
-  
-  const isLoading = ref(true);
-  
-  onMounted(async () => {
-    try {
-      await fetchData();
-      isLoading.value = false;
-    } catch (error) {
-      console.error("Ошибка при загрузке данных:", error);
-      isLoading.value = false;
-    }
-  });
-  
-  async function fetchData() {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, 1000);
+<script setup>
+    import { ref, onMounted } from 'vue';
+    
+    const isLoading = ref(true);
+    
+    onMounted(async () => {
+      try {
+        await fetchData();
+        isLoading.value = false;
+      } catch (error) {
+        console.error("Ошибка при загрузке данных:", error);
+        isLoading.value = false;
+      }
     });
-  }
-  </script>
+    
+    async function fetchData() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 1000);
+      });
+    }
+</script>
   
   <style lang="css">
   .loader {

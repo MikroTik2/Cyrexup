@@ -23,7 +23,6 @@
     import 'swiper/css/free-mode';
     import 'swiper/css/scrollbar';
   
-    import './style.css';
   
     // import required modules
     import { FreeMode, Scrollbar, Mousewheel } from 'swiper/modules';

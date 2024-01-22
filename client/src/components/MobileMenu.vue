@@ -1,5 +1,6 @@
 <template>
-     <div class="fixed lg:hidden top-0 bottom-0 transition-all duration-200 right-0 left-0 bg-[#101113FA] pb-[1rem] pt-[25px] px-4 bg-opacity-50" v-show="isVisibleMenu">
+     <div  class="fixed lg:hidden top-0 bottom-0 transition-all duration-200 right-0 left-0 z-50 bg-[#101113FA] pb-[1rem] pt-[25px] px-4 bg-opacity-50"
+    :class="{ 'opacity-100': isVisibleMenu, 'opacity-0': !isVisibleMenu, 'pointer-events-auto': isVisibleMenu, 'pointer-events-none': !isVisibleMenu }">
           <div class="flex items-center justify-between mb-[50px]">
                <router-link to="/">
                     <img src="/img/logo-mobile.png" alt="cyrexup">
