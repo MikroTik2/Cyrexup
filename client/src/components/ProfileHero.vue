@@ -69,7 +69,6 @@
                               </div>
                          
                          </div>
-
                          <!-- balance & trade url -->
                          <button type="button" style="background: linear-gradient(265deg, #237249 6.79%, #35C66B 97.2%);" class="rounded-[.625rem] w-[100%] mt-4 h-[2.8125rem] flex items-center justify-center opacity-100 transition duration-150 ease-in-out hover:opacity-70">ПОПОЛНИТЬ</button>
                          <button @click="toggleTrade" type="button" class="relative mt-2.5 transition duration-150 ease-in-out hover:opacity-70 flex items-center justify-between border-dashed border-[.0313rem] px-2.5 text-[#3D74FF] text-[.75rem] w-[100%] gap-1 h-[1.875rem] rounded-[.5rem] border-[#3D74FF]">
@@ -78,7 +77,7 @@
                                    Trade URL ССЫЛКА
                               </div>
 
-                              <img src="/svg/fluent.svg" class="" alt="fluent">
+                              <img src="/svg/fluent.svg" alt="fluent">
                          </button>
 
                          <!-- promocode -->
@@ -354,60 +353,57 @@
                </div>
           </div>
 
-          <ModelTradeUrl :isVisibleTradeurl="isVisibleTradeurl" @close-trade="toggleTrade"/>
+          <ModelTradeUrl :isVisibleTradeurl="isVisibleTradeurl" @close-trade="toggleTrade" />
      </div> 
 </template>
 
+
+
 <script setup>
-     import { ref, watch } from 'vue';
-     import { useRoute, useRouter } from 'vue-router';
+import { ref, watchEffect } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import ModelTradeUrl from '@/components/ModelTradeUrl.vue';
 
-     import ModelTradeUrl from '@/components/ModelTradeUrl.vue';
+const route = useRoute();
+const router = useRouter();
 
-     const route = useRoute();
-     const router = useRouter();
+const c = ref('COPY');
+const r = ref('https://cyrexup.com/ref/lk423s'); // Исправлен путь
 
-     const isVisibleTradeurl = ref(false);
+const b = ref(0);
+const w = ref(128.75);
 
-     const c = ref('COPY');
-     const r = ref('https:/cyrexup.com/ref/lk423s');
+const copyText = () => {
+  try {
+    const tempInput = document.createElement('input');
+    tempInput.value = r.value;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
 
-     const b = ref(0);
-     const w = ref(128.75);
+    c.value = 'OK';
+    setTimeout(() => {
+      c.value = 'COPY';
+    }, 3000);
+  } catch (error) {
+    console.error('Ошибка при копировании текста:', error);
+  }
+};
 
-     const copyText = () => {
+const isVisibleTradeurl = ref(false);
 
-          const tempInput = document.createElement('input');
+const toggleTrade = () => {
+  isVisibleTradeurl.value = !isVisibleTradeurl.value;
+  document.body.style.overflow = isVisibleTradeurl.value ? 'hidden' : '';
+};
 
-          tempInput.value = r.value;
+const handleButtonClick = (count, width) => {
+  b.value = count;
+  w.value = width;
+};
 
-          document.body.appendChild(tempInput);
-          tempInput.select();
-
-          document.execCommand('copy');
-          document.bodyNaNpxoveChild(tempInput);
-
-          c.value = 'OK'
-
-
-          setTimeout(() => {
-               c.value = 'COPY';
-          }, 3000);
-     };
-     
-     const toggleTrade = () => {
-          isVisibleTradeurl.value = !isVisibleTradeurl.value;
-
-          if (isVisibleTradeurl.value) {
-               document.body.style.overflow = 'hidden';
-          } else {
-               document.body.style.overflow = '';
-          }
-     };
-     
-     const handleButtonClick = (count, width) => {
-          b.value = count;
-          w.value = width;
-     };
-
+watchEffect(() => {
+  // Логика, которая будет выполняться при изменении зависимостей
+});
 </script>
