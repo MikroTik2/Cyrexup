@@ -1,22 +1,25 @@
 <template>
      <header class="flex absolute lg:relative top-0 inset-x-0 lg:justift-[initial] lg:inset-auto z-10 px-4 lg:px-0 items-center py-5 ">
-          <nav class="-ml-2 mt-2 w-full text-lg font-medium lg:flex hidden lg:m-0 lg:mr-auto lg:w-auto">
-              <ul class="flex pl-[130px] lg:flex-row lg:items-center">
+          <nav class="-ml-2 mt-2 w-full pl-[140px] text-lg font-medium lg:flex hidden lg:m-0 lg:mr-auto lg:w-auto">
+               <!-- logo -->
+               <img class="mr-8" src="/svg/logo-full.svg" alt="logo">
 
-                    <li><a href="/streamline" class="flex items-center gap-2 py-3 px-2.5 text-[#dae2f5] transition-colors hover:text-white">
-                         <img src="/svg/streamline.svg" alt="streamline">
-                         <span>Сотрудничество</span>
-                    </a></li>
-                    <li><a href="/tabler" class="flex items-center gap-2 py-3 px-2.5 text-[#dae2f5] transition-colors hover:text-white">
-                         <img src="/svg/tabler.svg" alt="tabler">
-                         <span>Бонусы</span>
-                    </a></li>
+               <ul class="flex lg:flex-row lg:items-center">
 
-              </ul> 
+                         <li><a href="/streamline" class="flex items-center gap-2 py-3 px-2.5 text-[#dae2f5] transition-colors hover:text-white">
+                              <img src="/svg/streamline.svg" alt="streamline">
+                              <span>Сотрудничество</span>
+                         </a></li>
+                         <li><a href="/tabler" class="flex items-center gap-2 py-3 px-2.5 text-[#dae2f5] transition-colors hover:text-white">
+                              <img src="/svg/tabler.svg" alt="tabler">
+                              <span>Бонусы</span>
+                         </a></li>
+
+               </ul> 
           </nav>
 
           <router-link to="/" title="Home page" class="block lg:hidden">
-               <img src="/img/logo-mobile.png" alt="cyrexup">
+               <img src="/svg/logo-mobile.svg" alt="cyrexup">
           </router-link>
 
           <div class="ml-auto h-11 lg:h-12.5 items-center gap-[7px] lg:gap-5 flex">
@@ -59,27 +62,27 @@
 </template>
 
 <script setup>
-     import { ref } from 'vue';
-     import MobileMenu from '@/components/MobileMenu.vue';
+import { ref } from 'vue';
+import MobileMenu from '@/components/MobileMenu.vue';
 
-     const isVisibleMenu = ref(false);
+const isVisibleMenu = ref(false);
 
-     const toggleMenu = () => {
-          isVisibleMenu.value = !isVisibleMenu.value;
+const toggleMenu = () => {
+     isVisibleMenu.value = !isVisibleMenu.value;
 
-          if (isVisibleMenu.value) {
-               document.body.style.overflow = 'hidden';
-          } else {
-               document.body.style.overflow = '';
-          };
-     };
-
-     const toggleMenuClose = () => {
-          isVisibleMenu.value = false;
+     if (isVisibleMenu.value) {
+          document.body.style.overflow = 'hidden';
+     } else {
           document.body.style.overflow = '';
      };
+};
 
-     const props = defineProps({
-          colorLink: String,
-     });
+const toggleMenuClose = () => {
+     isVisibleMenu.value = false;
+     document.body.style.overflow = '';
+};
+
+const props = defineProps({
+     colorLink: String,
+});
 </script>

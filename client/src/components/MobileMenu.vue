@@ -3,7 +3,7 @@
     :class="{ 'opacity-100': isVisibleMenu, 'opacity-0': !isVisibleMenu, 'pointer-events-auto': isVisibleMenu, 'pointer-events-none': !isVisibleMenu }">
           <div class="flex items-center justify-between mb-[50px]">
                <router-link to="/">
-                    <img src="/img/logo-mobile.png" alt="cyrexup">
+                    <img src="/svg/logo-mobile.svg" alt="cyrexup">
                </router-link>
 
                <button type="button" @click="closeMenu">

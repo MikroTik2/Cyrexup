@@ -353,7 +353,8 @@
                </div>
           </div>
 
-          <ModelTradeUrl :isVisibleTradeurl="isVisibleTradeurl" @close-trade="toggleTrade" />
+          <!-- <ModelTradeUrl :isVisibleTradeurl="isVisibleTradeurl" @close-trade="toggleTrade" /> -->
+          <!-- пофиксить! -->
      </div> 
 </template>
 
@@ -368,12 +369,13 @@ const route = useRoute();
 const router = useRouter();
 
 const c = ref('COPY');
-const r = ref('https://cyrexup.com/ref/lk423s'); // Исправлен путь
+const r = ref('https://cyrexup.com/ref/lk423s'); 
 
 const b = ref(0);
 const w = ref(128.75);
 
 const copyText = () => {
+
   try {
     const tempInput = document.createElement('input');
     tempInput.value = r.value;
@@ -402,8 +404,4 @@ const handleButtonClick = (count, width) => {
   b.value = count;
   w.value = width;
 };
-
-watchEffect(() => {
-  // Логика, которая будет выполняться при изменении зависимостей
-});
 </script>

@@ -23,7 +23,7 @@
       </button>
     </div>
 
-    <div class="bg-[#101113FA] fixed top-0 right-0 bottom-0 left-0 bg-opacity-50 h-screen" @click="closeTrade"></div>
+    <div class="bg-[#101113FA] z-[-5] fixed top-0 right-0 bottom-0 left-0 bg-opacity-50 h-screen" @click="closeTrade"></div>
   </div>
 </template>
 
