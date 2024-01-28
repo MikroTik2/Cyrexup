@@ -3,8 +3,8 @@
           <Loader v-if="isLoading" />
        <div id="main-layout">
             <SideBar/>
-          <div class="w-full px-2.5 pt-16 lg:pt-0 lg:h-[100svh] lg:px-5 pb-5">
-               <Header />
+            <div class="w-full mx-auto px-2.5 pt-16 lg:pt-0 lg:h-[100svh] lg:px-5 pb-5">
+                 <Header />
                <!-- <Footer /> -->
                <router-view></router-view>
           </div>

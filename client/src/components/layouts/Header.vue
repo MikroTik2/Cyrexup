@@ -1,7 +1,7 @@
 <template>
-     <header class="flex absolute lg:relative top-0 inset-x-0 lg:justift-[initial] lg:inset-auto z-10  pl-4 pr-4 lg:px-0 items-center py-5 ">
+     <header class="flex absolute lg:relative top-0 inset-x-0 lg:justift-[initial] lg:inset-auto z-10 px-4 lg:px-0 items-center py-5 ">
           <nav class="-ml-2 mt-2 w-full text-lg font-medium lg:flex hidden lg:m-0 lg:mr-auto lg:w-auto">
-              <ul class="flex lg:flex-row lg:items-center">
+              <ul class="flex pl-[130px] lg:flex-row lg:items-center">
 
                     <li><a href="/streamline" class="flex items-center gap-2 py-3 px-2.5 text-[#dae2f5] transition-colors hover:text-white">
                          <img src="/svg/streamline.svg" alt="streamline">
