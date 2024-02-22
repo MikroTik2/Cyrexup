@@ -27,22 +27,22 @@
                          </li>
 
                          <li>
-                              <router-link @click="handleButtonClick(340, 123.59)" to="/profile" class="flex justify-center relative w-[7.7244rem] h-[3.125rem] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
-                                   <img width="21" height="21" src="/svg/routes/arrow-up-icon.svg" alt="arrow-up">
+                              <router-link @click="handleButtonClick(340, 123.59)" to="/profile/withdrawals" class="flex justify-center relative w-[7.7244rem] h-[3.125rem] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                   <img width="21" height="21" src="/svg/routes/arrow-up-icon.svg" alt="withdrawals">
                                    Выводы
                               </router-link>
                          </li>
 
                          <li>
                               <router-link @click="handleButtonClick(493, 170)" to="/profile" class="flex justify-center relative w-[10.625rem] h-[3.125rem] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
-                                   <img width="21" height="21" src="/svg/routes/profile-icon.svg" alt="profile">
+                                   <img width="21" height="21" src="/svg/routes/profile-icon.svg" alt="referral">
                                    Реф. система
                               </router-link>
                          </li>
 
                          <li>
                               <router-link @click="handleButtonClick(693, 163)" to="/profile" class="flex justify-center relative w-[10.2019rem] h-[3.125rem] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
-                                   <img width="21" height="21" src="/svg/routes/profile-icon.svg" alt="profile">
+                                   <img width="21" height="21" src="/svg/routes/profile-icon.svg" alt="history">
                                    История игр
                               </router-link>
                          </li>
@@ -124,7 +124,7 @@
                               </li>
 
                               <li>
-                                   <router-link @click="handleButtonClick(340, 123.59)" to="/profile" class="flex justify-center relative w-[7.7244rem] h-[3.125rem] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
+                                   <router-link @click="handleButtonClick(340, 123.59)" to="/profile/withdrawals" class="flex justify-center relative w-[7.7244rem] h-[3.125rem] z-10 h-13 lg:h-17 items-center gap-2.5 lg:gap-3 text-nano [--fill:#a6adcd] fill-[#a6adcd] text-[#d6e2ff] transition-colors hover:fill-white hover:[--fill:white] hover:text-white aria-pressed:[--fill:white] aria-pressed:pointer-events-none aria-pressed:text-white">
                                         <img width="21" height="21" src="/svg/routes/arrow-up-icon.svg" alt="arrow-up">
                                         Выводы
                                    </router-link>
@@ -146,7 +146,7 @@
                          </ul>
 
                          <!-- analytics user -->
-                         <div class="grid-cols-3 gap-[.625rem] hidden md:grid" v-if="route.path !== '/profile/inventory'"> 
+                         <div class="grid-cols-3 gap-[.625rem] hidden md:grid" v-if="route.path !== '/profile/inventory' && route.path !== '/profile/withdrawals'"> 
                               <div class="rounded-[.9375rem] gap-[1.25rem] flex bg-[#16181B] w-[100%] p-5">
                                    <img src="/svg/controller.svg" alt="controller">
 
@@ -176,7 +176,7 @@
 
                          </div>
 
-                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:h-[12.5rem] gap-[.625rem] leading-6" v-show="route.path !== '/profile/inventory'">
+                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:h-[12.5rem] gap-[.625rem] leading-6" v-show="route.path !== '/profile/inventory' && route.path !== '/profile/withdrawals'">
 
                               <!-- refferal mobile -->
                               <div class="bg-[#16181B] md:hidden block px-[.5rem] py-[1.375rem] rounded-[.9375rem]">
@@ -361,7 +361,7 @@
 
 
 <script setup>
-import { ref, watchEffect } from 'vue';
+import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import ModelTradeUrl from '@/components/ModelTradeUrl.vue';
 
